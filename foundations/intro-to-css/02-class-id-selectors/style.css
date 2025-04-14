@@ -1,0 +1,21 @@
+.default {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    background-color: lightcoral;
+}
+
+.default.big {
+    font-size: 32px;
+}
+
+#first_id  {
+    color: blue;
+    font-size: 40px;
+}
+
+#second_id {
+    font-weight: bold;
+    font-size: 36px;
+    color: black;
+    background-color: lightgreen;
+}
