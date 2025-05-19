@@ -1,10 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .container {
+  min-height: 100vh;
+  display: grid;
+  gap: 4px;
   text-align: center;
+  grid-template-columns: minmax(200px, 1fr) minmax(800px, 4fr);
+  grid-template-rows: 2fr 1fr 12fr 1fr;
 }
 
 .container div {
@@ -16,8 +22,23 @@
 }
 
 .header {
+  display: grid;
+  grid-area: 1 / 1 / 2 / 3;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
   background-color: #393f4d;
+ 
 }
+
+.logo {
+  justify-self: start;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 
 .menu ul,
 .menu li {
@@ -25,6 +46,10 @@
 }
 
 .sidebar {
+  grid-area: 2 / 1 / 4 / 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 50px;
   background-color: #C50208;
 }
 
@@ -45,7 +70,15 @@
 }
 
 .nav {
+  grid-area: 2 / 2 / 3 / 3;
   background-color: #C50208;
+}
+
+.nav ul {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
 }
 
 .nav ul li {
@@ -54,7 +87,12 @@
 }
 
 .article {
+  display: grid;
+  grid-area: 3 / 2 / 4 / 3;
   background-color: #bccbde;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  grid-auto-rows: 200px;
 }
 
 .article p {
@@ -82,7 +120,10 @@
 }
 
 .footer {
+  display: grid;
+  align-items: center;
   background-color: #393f4d;
+  grid-area: 4 / 1 / 4 / 3;
 }
 
 .footer p {
